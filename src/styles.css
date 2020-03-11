@@ -3,3 +3,22 @@
 body {
     background-color: #F3E7C3;
 }
+
+.hoverwell {
+    padding: 5%;
+    color: #5A0505;
+}
+
+.hoverwell:hover {
+    background-color:rgb(236, 215, 150);
+    cursor: default;
+  }
+  .container {
+    padding-top: 10px;
+  }
+  
+  .pointable {
+    cursor: pointer;
+  }
+
+  

@@ -18,8 +18,7 @@ import { Component } from '@angular/core'
         button {
             color: #f5f5f5;
         }
-        `
-    ]
+        `]
 })
 
 export class NavBarComponent
