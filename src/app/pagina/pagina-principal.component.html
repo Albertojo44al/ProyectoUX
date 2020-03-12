@@ -30,17 +30,25 @@
                 </a>
             </div><!-- /.carousel -->
         </div><!-- /.container -->
-
-        <div class="row">
-            <div *ngFor="let o of Ofertas" class="col-md-6">
+<br>
+        <div class="row justify-content-around">
+            <div *ngFor="let o of Ofertas" class="col-4">
                 <div  class="well hoverwell thumbnail">
-                    <h2>{{o?.id}}</h2>
-                    <div><img src="{{o?.img}}" width="100%" height="100%"></div>
-                    <div>{{o?.name}}</div>
-                    <button class="btn btn-primary" (click)="handleClickMe()">Click Me!</button>
+                    <div><img src="/assets/superOfertas/{{o?.img}}.jpg" width="450px" height="250px"></div><br>
+                    <button class="btn btn-primary" (click)="handleClickMe()"> {{o?.name}}</button>
                 </div>
              </div>
         </div>
 
-        
+<br><br>
+        <!-- Footer -->
+<footer class="page-footer font-small blue">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#">CrunchyRoyalPizza.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

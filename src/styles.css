@@ -1,24 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 
+h1, h2
+{
+    color: #5A0505;
+}
+
+
 body {
     background-color: #F3E7C3;
 }
 
 .hoverwell {
-    padding: 5%;
+    padding: 15px;
     color: #5A0505;
+    background-color: rgb(226, 205, 146);
+    text-align:center;
+    width: 100%;
 }
-
-.hoverwell:hover {
-    background-color:rgb(236, 215, 150);
-    cursor: default;
-  }
   .container {
     padding-top: 10px;
+    
   }
-  
+  .col-4{
+    border-radius: 20%;
+  }
   .pointable {
     cursor: pointer;
   }
+.btn{
+  background-color: #5A0505;
+  border: #5A0505;
+}
+.btn:hover{
+  background-color:rgb(170, 22, 22);
+}
 
-  
+.page-footer{
+  background-color:#5A0505;
+  color: white;
+}

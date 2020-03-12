@@ -16,18 +16,10 @@ export class superOfertasService
 
 const ofertas=[{
     id: 1,
-    img: "/assets/superOfertas/o1.png",
+    img: "o1",
     name: "oferta1",},
 {
     id: 2,
-    img: "/assets/superOfertas/o2.jpg",
-    name: "oferta2",},
-{
-    id: 3,
-    img: "/assets/superOfertas/o3.jpg",
-    name: "oferta3",},
-{
-    id: 4,
-    img: "/assets/superOfertas/o4.jpg",
-    name: "oferta4",}
+    img: "o4",
+    name: "oferta2",}
 ]
