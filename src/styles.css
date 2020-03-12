@@ -15,7 +15,6 @@ body {
     color: #5A0505;
     background-color: rgb(226, 205, 146);
     text-align:center;
-    width: 100%;
 }
   .container {
     padding-top: 10px;
@@ -30,9 +29,11 @@ body {
 .btn{
   background-color: #5A0505;
   border: #5A0505;
+  color: white;
 }
 .btn:hover{
   background-color:rgb(170, 22, 22);
+  color: white;
 }
 
 .page-footer{

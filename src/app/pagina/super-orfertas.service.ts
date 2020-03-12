@@ -21,5 +21,9 @@ const ofertas=[{
 {
     id: 2,
     img: "o4",
-    name: "oferta2",}
+    name: "oferta2",},
+{    
+    id: 3,
+    img: "o3",
+    name: "oferta3",}
 ]

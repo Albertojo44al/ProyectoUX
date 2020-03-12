@@ -34,8 +34,8 @@
         <div class="row justify-content-around">
             <div *ngFor="let o of Ofertas" class="col-4">
                 <div  class="well hoverwell thumbnail">
-                    <div><img src="/assets/superOfertas/{{o?.img}}.jpg" width="450px" height="250px"></div><br>
-                    <button class="btn btn-primary" (click)="handleClickMe()"> {{o?.name}}</button>
+                    <div><img src="/assets/superOfertas/{{o?.img}}.jpg" width="100%" height="250px"></div><br>
+                    <button class="btn" (click)="handleClickMe()"> {{o?.name}}</button>
                 </div>
              </div>
         </div>
