@@ -1,27 +1,29 @@
-<div class="row justify-content-around">
-    <div class="imagen"><br><br><br><br>
-        <H1><i><b>CRUNCHY ROLL PIZZA</b></i></H1>
-        <img src="/assets/pizza.png" height="60%">
+<div class="container pt-3">
+<div class="row justify-content-between">
+    <div class="imagen"><br><br><br>
+        <H1><i><b>CRUNCHY ROYAL PIZZA</b></i></H1>
+        <img src="/assets/pizza.png" height="70%">
     </div>
     
-    <div class="col-4" ><br><br><br><br><br><br>
-        <h1>Log in </h1>
+    <div class="col-4" ><br><br><br><br>
+        <h1 >Log in </h1>
         <hr>
       <form [formGroup]="usuarioForm" autocomplete="off" novalidate>
         <div class="form-group" [ngClass]="{'error': NoValidUsuario()}" >
           <label for="usuario">Usuario:</label>
           <em *ngIf="NoValidUsuario() && usuarioForm.controls.usuario?.errors.required">Este campo es requerido</em>
-          <input formControlName="usuario" id="usuario" type="text" class="form-control" placeholder="Nombre..." />
+          <input formControlName="usuario" id="usuario" type="text" class="form-control" placeholder="usuario..." />
         </div>
         <div class="form-group" [ngClass]="{'error': NoValidPassword()}">
           <label for="password">Contraseña:</label>
           <em *ngIf="NoValidPassword() && usuarioForm.controls.password?.errors.required">Este campo es requerido</em>
-          <input formControlName="password" id="password" type="text" class="form-control" placeholder="Apellido..." />
+          <input formControlName="password" id="password" type="text" class="form-control" placeholder="constraseña..." />
         </div>
         <br> 
        
-        <button type="submit" class="btn btn-primary">Log in</button><br><br>
-        <a href="#">Crear cuenta</a><br><br><br><br><br><br>
+        <button type="submit" class="btn btn-primary">Log in</button><br><br><br>
+        <a href="#">Crear cuenta</a>
       </form>
     </div>
   </div>
+</div>
