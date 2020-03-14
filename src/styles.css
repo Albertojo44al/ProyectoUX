@@ -20,9 +20,6 @@ body {
     padding-top: 10px;
     
   }
-  .col-4{
-    border-radius: 20%;
-  }
   .pointable {
     cursor: pointer;
   }

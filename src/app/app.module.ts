@@ -6,6 +6,8 @@ import { RouterModule } from "@angular/router";
 import {PaginaPrincipalComponent} from "./pagina/pagina-principal.component";
 import { AppRoutes } from "./route";
 import {superOfertasService} from  "./pagina/super-orfertas.service";
+import {crearUsuarioComponent} from "./usuario/log-in.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 //bootstrap
 
@@ -14,10 +16,12 @@ import {superOfertasService} from  "./pagina/super-orfertas.service";
   declarations: [
     AppComponent,
     NavBarComponent,
-    PaginaPrincipalComponent
+    PaginaPrincipalComponent,
+    crearUsuarioComponent
   ],
   imports: [
-    
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
   

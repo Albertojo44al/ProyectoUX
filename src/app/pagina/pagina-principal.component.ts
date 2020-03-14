@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 import {superOfertasService} from "./super-orfertas.service"
 
 @Component({
-    templateUrl: './pagina-principal.component.html',
-  
+    templateUrl: './pagina-principal.component.html'
 })
 
 export class PaginaPrincipalComponent{
