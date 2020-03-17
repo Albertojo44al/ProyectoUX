@@ -1,10 +1,13 @@
 import { Routes } from "@angular/router";
 import {PaginaPrincipalComponent} from "./pagina/pagina-principal.component";
-import {crearUsuarioComponent} from "./usuario/log-in.component";
+import {loginComponent} from "./usuario/log-in.component";
+import {crearUsuarioComponent} from "./usuario/crear-usuario.component";
 
 
 export const AppRoutes: Routes = [
     { path: 'crunchyRoll', component: PaginaPrincipalComponent },
     { path: '',  redirectTo: '/crunchyRoll', pathMatch: 'full'},
-    { path: 'crunchyRoll/Perfil', component:crearUsuarioComponent}
+    { path: 'login', component:loginComponent},
+    { path: 'SignUp', component:crearUsuarioComponent}
+   
 ]

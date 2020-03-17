@@ -16,16 +16,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
   `]
 })
 
-export class crearUsuarioComponent implements OnInit{
-    firstName:FormControl
-    lastName:FormControl
+export class loginComponent implements OnInit{
     usuario:FormControl
     password:FormControl    
     usuarioForm: FormGroup
 
     constructor(){
-        this.firstName = new FormControl('',  [Validators.required, Validators.pattern('[a-zA-Z]*')]);
-        this.lastName = new FormControl('',  Validators.pattern('[a-zA-Z]*'));
         this.usuario = new FormControl('', Validators.required);
         this.password = new FormControl('', Validators.required);
     }
@@ -33,8 +29,6 @@ export class crearUsuarioComponent implements OnInit{
     ngOnInit()
   {
       this.usuarioForm = new FormGroup({
-          firstName: this.firstName,
-          lastName: this.lastName,
           usuario: this.usuario,
           password: this.password
       });
