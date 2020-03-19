@@ -27,8 +27,8 @@ export class crearUsuarioComponent{
 
 
     constructor(){
-        this.nombre = new FormControl('',  [Validators.required, Validators.pattern('[a-zA-Z]*')]);
-        this.apellido = new FormControl('',  Validators.pattern('[a-zA-Z]*'));
+        this.nombre = new FormControl('',  [Validators.required, Validators.pattern('[a-zA-Z ]*')]);
+        this.apellido = new FormControl('',  Validators.pattern('[a-zA-Z ]*'));
         this.direccion = new FormControl('', Validators.required);
         this.usuario = new FormControl('', Validators.required);
         this.password = new FormControl('', Validators.required);
@@ -46,6 +46,10 @@ export class crearUsuarioComponent{
     }
     NovalidNombre(){
         return this.nombre.invalid && this.nombre.touched;
+    }
+
+    NovalidApellido(){
+        return this.apellido.invalid && this.apellido.touched;
     }
 
     NoValidUsuario(){

@@ -2,7 +2,7 @@
     <div class="row justify-content-between">
         <div class="imagen"><br><br><br>
             <H1><i><b>CRUNCHY ROYAL PIZZA</b></i></H1>
-            <img src="/assets/pizza.png" height="70%">
+            <img src="/assets/pizza.png" height="65%">
         </div>
 
         <div class="col-4"><br><br>
@@ -15,8 +15,9 @@
                     <em *ngIf="NovalidNombre() && usuarioForm.controls.nombre?.errors.pattern">No se aceptan numero en nombre </em>
                     <input formControlName="nombre" id="nombre" type="text" class="form-control" placeholder="nombre... " />
                 </div>
-                <div class="form-group ">
+                <div class="form-group " [ngClass]="{ 'error': NovalidApellido()} ">
                     <label for="apellido">  Apellido:</label>
+                    <em *ngIf="NovalidApellido() && usuarioForm.controls.apellido?.errors.pattern">No se aceptan numero en apellido </em>
                     <input formControlName="apellido" id="apellido" type="text" class="form-control" placeholder="apellido... " />
                 </div>
                 <div class="form-group" [ngClass]="{ 'error': NovalidDireccion()} ">

@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { loginComponent } from "./usuario/log-in.component";
 import { crearUsuarioComponent } from "./usuario/crear-usuario.component"
 import { NavBarComponent } from './navbar/navbar.component';
-
+import { pizzaComponent } from './pagina/pizzas.component';
 //bootstrap
 
 
@@ -25,7 +25,8 @@ import { NavBarComponent } from './navbar/navbar.component';
     NavBarComponent,
     PaginaPrincipalComponent,
     loginComponent,
-    crearUsuarioComponent
+    crearUsuarioComponent,
+    pizzaComponent
    
   ],
   imports: [

@@ -1,10 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-h1, h2
-{
+h1,
+h2 {
     color: #5A0505;
 }
-
 
 body {
     background-color: #F3E7C3;
@@ -14,26 +13,34 @@ body {
     padding: 15px;
     color: #5A0505;
     background-color: rgb(226, 205, 146);
-    text-align:center;
-}
-  .container {
-    padding-top: 10px;
-    
-  }
-  .pointable {
-    cursor: pointer;
-  }
-.btn{
-  background-color: #5A0505;
-  border: #5A0505;
-  color: white;
-}
-.btn:hover{
-  background-color:rgb(170, 22, 22);
-  color: white;
+    text-align: center;
 }
 
-.page-footer{
-  background-color:#5A0505;
-  color: white;
+.hoverwell:hover .btn {
+    background-color: rgb(170, 22, 22);
+    color: white;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.pointable {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #5A0505;
+    border: #5A0505;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(170, 22, 22);
+    color: white;
+}
+
+.page-footer {
+    background-color: #5A0505;
+    color: white;
 }
