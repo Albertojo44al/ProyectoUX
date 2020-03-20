@@ -16,6 +16,8 @@ import { loginComponent } from "./usuario/log-in.component";
 import { crearUsuarioComponent } from "./usuario/crear-usuario.component"
 import { NavBarComponent } from './navbar/navbar.component';
 import { pizzaComponent } from './pagina/pizzas.component';
+import {extrasComponent} from './pagina/extras.component';
+import { promocionesComponent } from './pagina/promociones.component';
 //bootstrap
 
 
@@ -26,8 +28,9 @@ import { pizzaComponent } from './pagina/pizzas.component';
     PaginaPrincipalComponent,
     loginComponent,
     crearUsuarioComponent,
-    pizzaComponent
-   
+    pizzaComponent,
+    extrasComponent,
+    promocionesComponent
   ],
   imports: [
     FormsModule,

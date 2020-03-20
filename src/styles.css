@@ -10,6 +10,7 @@ body {
 }
 
 .hoverwell {
+    margin: 15px;
     padding: 15px;
     color: #5A0505;
     background-color: rgb(226, 205, 146);
