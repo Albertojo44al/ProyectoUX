@@ -1,5 +1,8 @@
-import { Component } from "@angular/core";
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { Component, OnInit } from "@angular/core";
+import {  NgForm } from '@angular/forms'
+import { UsuarioModel } from '../models/usuario.model';
+import { AuthService } from '../services/auth.services';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,51 +19,30 @@ em {float:right; color:#FE0505; padding-left: 10px;}
 `]
 })
 
-export class crearUsuarioComponent{
-    usuario:FormControl
-    password:FormControl   
-    nombre:FormControl
-    apellido:FormControl 
-    direccion:FormControl
-    usuarioForm: FormGroup
+export class crearUsuarioComponent implements OnInit{ 
 
+    usuario :UsuarioModel;
 
-
-    constructor(){
-        this.nombre = new FormControl('',  [Validators.required, Validators.pattern('[a-zA-Z ]*')]);
-        this.apellido = new FormControl('',  Validators.pattern('[a-zA-Z ]*'));
-        this.direccion = new FormControl('', Validators.required);
-        this.usuario = new FormControl('', Validators.required);
-        this.password = new FormControl('', Validators.required);
+    constructor(private auth:AuthService, private router: Router){
+        
     }
 
     ngOnInit()
     {
-        this.usuarioForm = new FormGroup({
-            nombre: this.nombre,
-            apellido: this.apellido,
-            usuario: this.usuario,
-            password: this.password,
-            direccion: this.direccion
-        });
-    }
-    NovalidNombre(){
-        return this.nombre.invalid && this.nombre.touched;
-    }
-
-    NovalidApellido(){
-        return this.apellido.invalid && this.apellido.touched;
-    }
-
-    NoValidUsuario(){
-        return this.usuario.invalid && this.usuario.touched;
-      }
+        this.usuario = new UsuarioModel();
     
-    NoValidPassword(){
-        return this.password.invalid && this.password.touched;
     }
 
-    NovalidDireccion(){
-        return this.direccion.invalid && this.direccion.touched;
+
+    fnSubmit(formulario: NgForm){
+        if(formulario.invalid){return;}
+        console.log('aver');
+        this.auth.nuevoUsuario(this.usuario).subscribe( resp => {
+            console.log(resp);
+            this.router.navigate(['/login']);
+        },(err) =>{
+            console.log(err.error.error.message);
+        });
+
     }
 }

@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule}from '@angular/common/http';
 
 //routes-services
 import {superOfertasService} from  "./pagina/super-orfertas.service";
+import {AuthService} from "./services/auth.services";
 import { RouterModule } from "@angular/router";
 import { AppRoutes } from "./route";
 
@@ -33,13 +35,14 @@ import { promocionesComponent } from './pagina/promociones.component';
     promocionesComponent
   ],
   imports: [
-    FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
+    HttpClientModule,
+    FormsModule
   
   ],
-  providers: [superOfertasService],
+  providers: [superOfertasService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

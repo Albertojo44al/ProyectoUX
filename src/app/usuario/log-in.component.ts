@@ -1,5 +1,7 @@
 import { Component,OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import {  NgForm } from '@angular/forms'
+import { UsuarioModel } from '../models/usuario.model';
+import { AuthService } from '../services/auth.services';
 
 
 @Component({
@@ -17,28 +19,25 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 
 export class loginComponent implements OnInit{
-    usuario:FormControl
-    password:FormControl    
-    usuarioForm: FormGroup
+    usuario: UsuarioModel;
 
-    constructor(){
-        this.usuario = new FormControl('', Validators.required);
-        this.password = new FormControl('', Validators.required);
+    constructor(private auth: AuthService){
+       
     }
 
     ngOnInit()
   {
-      this.usuarioForm = new FormGroup({
-          usuario: this.usuario,
-          password: this.password
-      });
+    this.usuario = new UsuarioModel();
   }
-    NoValidUsuario(){
-        return this.usuario.invalid && this.usuario.touched;
-      }
-    
-      NoValidPassword(){
-        return this.password.invalid && this.password.touched;
-      }
-    
+
+    fnSubmit(form: NgForm){
+      if(form.invalid){return;}
+      this.auth.login(this.usuario)
+      .subscribe(resp =>{
+        console.log(resp)
+      }, (err) => {
+        console.log(err.error.error.message);
+      });
+    }
+
 }
