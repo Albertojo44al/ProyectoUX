@@ -21,6 +21,11 @@ import { pizzaComponent } from './pagina/pizzas.component';
 import {extrasComponent} from './pagina/extras.component';
 import { promocionesComponent } from './pagina/promociones.component';
 import { AuthGuard } from './guards/auth.guard';
+import { detalleComboComponent } from './pagina/detalle-combo.component';
+import { nuevComboComponent } from './pagina/nuevo-combo.component';
+import { CombosService } from './services/combos.service';
+import { CarritoComponent } from './carrito/carrito.component';
+import { CarritoService } from './services/carrito.service';
 //bootstrap
 
 
@@ -33,7 +38,11 @@ import { AuthGuard } from './guards/auth.guard';
     crearUsuarioComponent,
     pizzaComponent,
     extrasComponent,
-    promocionesComponent
+    promocionesComponent,
+    detalleComboComponent,
+    nuevComboComponent,
+    CarritoComponent
+
   ],
   imports: [
     ReactiveFormsModule,
@@ -45,7 +54,9 @@ import { AuthGuard } from './guards/auth.guard';
   ],
   providers: [superOfertasService,
                 AuthService,
-                AuthGuard],
+                AuthGuard,
+                CombosService,
+                CarritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

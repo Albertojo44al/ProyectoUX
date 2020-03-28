@@ -6,6 +6,9 @@ import { pizzaComponent } from './pagina/pizzas.component';
 import { extrasComponent } from './pagina/extras.component';
 import { promocionesComponent } from './pagina/promociones.component';
 import { AuthGuard } from './guards/auth.guard';
+import { detalleComboComponent } from './pagina/detalle-combo.component';
+import { nuevComboComponent } from './pagina/nuevo-combo.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 export const AppRoutes: Routes = [
@@ -15,5 +18,8 @@ export const AppRoutes: Routes = [
     { path: 'SignUp', component:crearUsuarioComponent},
     {path: 'pizzas', component:pizzaComponent, canActivate: [AuthGuard]},
     {path: 'extras', component:extrasComponent, canActivate: [AuthGuard]},
-    {path: 'promociones', component: promocionesComponent, canActivate: [AuthGuard]}
+    {path: 'promociones', component: promocionesComponent, canActivate: [AuthGuard]},
+    {path: 'promociones/detalle/:id', component: detalleComboComponent},
+    {path: 'nuevoCombo',component: nuevComboComponent},
+    {path: 'carrito', component:CarritoComponent,canActivate: [AuthGuard]}
 ]

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4"><br><br><br><br>
+            <h1>Agregar Combo </h1>
+            <hr>
+            <form #f="ngForm" (ngSubmit)="fnSubmit( f )" autocomplete=" off ">
+                <div class="form-group " [ngClass]="{ 'error': f.submitted && f.controls['nombre'].errors} ">
+                    <label for="correo ">* Nombre</label>
+                    <em *ngIf="f.submitted && f.controls['nombre'].errors "> Este campo es requerido </em>
+                    <input [(ngModel)]="combo.nombre" required name="nombre" id="nombre " type="text " class="form-control " placeholder="Nombre... " />
+                </div>
+                <div class="form-group " [ngClass]="{ 'error': f.submitted && f.controls[ 'nombre'].errors } ">
+                    <label for="descripcion ">* Descripcion:</label>
+                    <em *ngIf="f.submitted && f.controls['descripcion'].errors"> Este campo es requerido </em>
+                    <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Descripcion.. " [(ngModel)]="combo.descripcion" required></textarea>
+                </div>
+
+                <div class="form-group " [ngClass]="{ 'error': f.submitted && f.controls['precio'].errors} ">
+                    <label for="correo ">* Precio: </label>
+                    <em *ngIf="f.submitted && f.controls['precio'].errors "> Este campo es requerido</em>
+                    <input [(ngModel)]="combo.precio" required name="precio" id="precio " type="text " class="form-control " placeholder="Precio... " />
+                </div>
+                <div class="form-group " [ngClass]="{ 'error': f.submitted && f.controls['imagen'].errors} ">
+                    <label for="imagen "> Imagen: </label>
+                    <em *ngIf="f.submitted && f.controls['imagen'].errors "> Este campo es requerido </em>
+                    <input [(ngModel)]="combo.imagenURL" required name="imagen" id="imagen " type="text " class="form-control " placeholder="Imagen URL... " />
+                </div>
+
+                <br>
+
+                <button type="submit " class="btn btn-primary  "><i class="fa fa-save"></i> Agregar</button><br><br>
+            </form>
+        </div>
+    </div>
+
+</div>
