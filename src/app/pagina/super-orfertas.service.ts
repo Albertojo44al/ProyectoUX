@@ -21,9 +21,9 @@ const ofertas=[{
 {
     id: 2,
     img: "o4",
-    name: "Pizza grande y una orden de palitroques"},
+    name: "Pizza grande, orden de palitroques"},
 {    
     id: 3,
     img: "o3",
-    name: "Pizza grande de cualquier especialidad"}
+    name: "Pizza grande, cualquier especialidad"}
 ]
