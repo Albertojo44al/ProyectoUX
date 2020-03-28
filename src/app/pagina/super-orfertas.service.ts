@@ -17,13 +17,13 @@ export class superOfertasService
 const ofertas=[{
     id: 1,
     img: "o1",
-    name: "oferta1",},
+    name: "Pizza grande de queso y pepperoni"},
 {
     id: 2,
     img: "o4",
-    name: "oferta2",},
+    name: "Pizza grande y una orden de palitroques"},
 {    
     id: 3,
     img: "o3",
-    name: "oferta3",}
+    name: "Pizza grande de cualquier especialidad"}
 ]

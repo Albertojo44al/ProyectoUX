@@ -20,6 +20,7 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { pizzaComponent } from './pagina/pizzas.component';
 import {extrasComponent} from './pagina/extras.component';
 import { promocionesComponent } from './pagina/promociones.component';
+import { AuthGuard } from './guards/auth.guard';
 //bootstrap
 
 
@@ -42,7 +43,9 @@ import { promocionesComponent } from './pagina/promociones.component';
     FormsModule
   
   ],
-  providers: [superOfertasService,AuthService],
+  providers: [superOfertasService,
+                AuthService,
+                AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

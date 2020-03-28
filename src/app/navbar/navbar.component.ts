@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { AuthService } from '../services/auth.services';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,5 +25,17 @@ import { Component } from '@angular/core'
 
 export class NavBarComponent
 {
-   
+   constructor(private auth: AuthService, private router: Router){}
+
+   salir(){
+       this.auth.logout();
+       this.router.navigateByUrl('/login');
+   }
+
+   conectado():boolean{
+       if(this.auth.estaAutenticado())
+       return true;
+       else
+       return false;
+   }
 } 

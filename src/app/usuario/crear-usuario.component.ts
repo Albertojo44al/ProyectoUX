@@ -1,8 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import {  NgForm } from '@angular/forms'
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 import { UsuarioModel } from '../models/usuario.model';
 import { AuthService } from '../services/auth.services';
-import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -33,16 +36,32 @@ export class crearUsuarioComponent implements OnInit{
     
     }
 
+    
 
     fnSubmit(formulario: NgForm){
         if(formulario.invalid){return;}
-        console.log('aver');
+
+        
+        Swal.fire({
+            allowOutsideClick: false, 
+            icon: 'info',
+            text: 'Espere por favor...',
+        });
+        Swal.showLoading();
+
         this.auth.nuevoUsuario(this.usuario).subscribe( resp => {
-            console.log(resp);
+            Swal.close();
             this.router.navigate(['/login']);
         },(err) =>{
-            console.log(err.error.error.message);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al autenticar',
+                text: err.error.error.message,
+              });
+
         });
 
     }
+
+
 }

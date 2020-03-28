@@ -31,8 +31,11 @@
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['/login']" class="btn btn-info btn-lg">
+                    <a *ngIf="!conectado()" [routerLink]="['/login']" class="btn btn-info btn-lg">
                         <img src="assets/user.png" width="30px" height="30px">
+                    </a>
+                    <a *ngIf="conectado()" (click)="salir()" class="btn btn-info btn-lg">
+                        <img src="assets/salir.png" width="30px" height="30px">
                     </a>
                 </li>
             </ul>
